@@ -220,9 +220,8 @@ BEFORE INSERT ON grades FOR EACH ROW
 BEGIN
     SET NEW.grade_points= CASE NEW.letter_grade
      WHEN 'A'  THEN 4.00  WHEN 'A-' THEN 3.70
-        WHEN 'B+' THEN 3.30  WHEN 'B'  THEN 3.00  WHEN 'B-' THEN 2.70
-        WHEN 'C+' THEN 2.30  WHEN 'C'  THEN 2.00
-        WHEN 'D'  THEN 1.00  WHEN 'F'  THEN 0.00
+        WHEN 'B+' THEN 3.30  WHEN 'B'  THEN 3.00   WHEN 'C+' THEN 2.70  WHEN 'C'  THEN 2.40
+        WHEN 'D'  THEN 2.00  WHEN 'F'  THEN 0.00
         ELSE NULL
         END;
 END$$
