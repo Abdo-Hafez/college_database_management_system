@@ -1,1 +1,0 @@
-# college_database_management_system
