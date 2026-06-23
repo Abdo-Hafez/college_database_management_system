@@ -156,11 +156,9 @@ JOIN attendance a ON a.enrollment_id = e.enrollment_id
 GROUP BY s.student_id, s.name;
 
 -- --------------------- stored procedures ---------------------------------------
--- ─────────────────────────────────────────────────────────
 -- 1. Enroll a student in a course offering
 --    - Prevents duplicate enrollment
 --    - Returns a status message
--- ─────────────────────────────────────────────────────────
 
 DELIMITER $$
 
@@ -189,10 +187,10 @@ DELIMITER ;
 
 
 
--- ─────────────────────────────────────────────────────────
+
 -- 2. Get a student's full grade report
 --    - Shows course title, semester, year, and letter grade
--- ─────────────────────────────────────────────────────────
+
 
 DELIMITER $$
 
