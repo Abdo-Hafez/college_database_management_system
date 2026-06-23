@@ -11,7 +11,7 @@ LEFT JOIN students s ON d.department_id = s.department_id
 GROUP BY d.department_id, d.`name`
 ORDER BY total_students DESC;
 
--- 3. Student GPA using CTE
+-- 3. Student GPA 
 WITH student_grades AS (
   SELECT s.student_id, s.`name`, g.grade_points
   FROM students s
