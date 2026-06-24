@@ -75,7 +75,7 @@ CREATE TABLE enrollments (
 );
 CREATE TABLE grades (
     grade_id INT AUTO_INCREMENT PRIMARY KEY, enrollment_id INT UNIQUE,
-    letter_grade ENUM('A','A-','B+','B','B-','C+','C','D','F'), grade_points DECIMAL(3,2),
+    letter_grade ENUM('A','A-','B+','B','C+','C','D','F'), grade_points DECIMAL(3,2),
     CONSTRAINT chk_grade_points CHECK (grade_points BETWEEN 0.00 AND 4.00),
     FOREIGN KEY (enrollment_id) REFERENCES enrollments(enrollment_id) ON DELETE CASCADE
 );
